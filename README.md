@@ -19,11 +19,19 @@ GIS data is collected (how) -> GIS data is stored (does it need tidying) -> GIS 
 * Experience utilizing GPS and data collectors
 * Experience with GIS and ESRI software
 * Experience with AutoCAD
+* R packages: [gmap](https://www.rdocumentation.org/packages/dismo/versions/1.1-4/topics/gmap), [sp](https://cran.r-project.org/web/packages/sp/sp.pdf), [sf](https://cran.r-project.org/web/packages/sf/index.html), [maptools](https://cran.r-project.org/web/packages/maptools/vignettes/combine_maptools.pdf)
 
 ## Datasets
 
 * https://gisgeography.com/best-free-gis-data-sources-raster-vector/
 * ShapeFiles : https://mangomap.com/gis-data
+
+[Shapefiles were developed by ESRI](https://www.loc.gov/preservation/digital/formats/fdd/fdd000280.shtml) (Environmental Systems Research Institute) and published in 1998 ([ESRI White Paper, 1998](https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)):
+Shapefiles are composed of:
+
+* Main file (*.shp)
+* index file (*.shx)
+* dBase Table (*DBF)
 
 ## Papers
 
