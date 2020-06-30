@@ -1,0 +1,58 @@
+---
+title: "Create a heatmap of the USA"
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "imgs/heatmap_map",
+  out.width = "100%"
+)
+```
+
+There are multiple methods of creating maps in R if you have longitude and latitude coordinates or full state or country counts. This tutorial will assume you have some familiarity to tidyverse and magrittr style R programs. For a full discussion on the benefits of tidyverse-style R programming, see [Wickham et al, 2019](https://tidyverse.tidyverse.org/articles/paper.html)
+
+## R Libraries required
+
+You might need to install the packages if they are not already installed.
+
+```{r dep, eval = FALSE}
+install.packages(c("tidyverse", "magrittr", "ggmap", "RColorBrewer", "usmap"))
+```
+
+Then load the libraries into R.
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(magrittr)
+library(usmap)
+#library(ggmap)         # <= requires a google key
+#library(RColorBrewer)
+#library(sf)            # <= eventually use sf methods
+```
+
+## Input File
+
+We are going to assume you have a count of items by state. Please download the input file from this [link]().
+
+
+
+```{r}
+# === Load the Excel Spreadsheet of state and counts
+data <- readxl::read_excel("data/usa.xlsx")
+head(data)
+```
+
+Now let's combine that with states.
+
+```{r}
+
+plot_usmap(include = c(data$TwoLetters)) +
+  labs(title = "The United States",
+       subtitle = "These are the 50 states.")
+
+```
