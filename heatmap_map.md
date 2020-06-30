@@ -31,7 +31,7 @@ library(usmap)
 ## Input File
 
 We are going to assume you have a count of items by state. Please
-download the input file from this [link]().
+download the input file from this [link](data/usa.xlsx).
 
 ``` r
 # === Load the Excel Spreadsheet of state and counts
