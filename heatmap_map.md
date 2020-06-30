@@ -1,6 +1,8 @@
 Create a heatmap of the USA
 ================
 
+**Last Update: 2020/06/30**
+
 There are multiple methods of creating maps in R if you have longitude
 and latitude coordinates or full state or country counts. This tutorial
 will assume you have some familiarity to

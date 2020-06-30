@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+**Last Update: 2020/06/30**
+
 There are multiple methods of creating maps in R if you have longitude and latitude coordinates or full state or country counts. This tutorial will assume you have some familiarity to [tidyverse](https://tidyverse.tidyverse.org/) and [magrittr](https://cran.r-project.org/web/packages/magrittr/vignettes/magrittr.html) style R programs. For a full discussion on the benefits of tidyverse-style R programming, see ["Welcome to the Tidyverse" (Wickham et al, 2019)](https://tidyverse.tidyverse.org/articles/paper.html)
 
 ## R Libraries required
