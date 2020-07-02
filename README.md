@@ -12,6 +12,8 @@ GIS = geospatial information systems
    
 3) GIS Analysis
    |_ R libraries: sp, sf, ggmap
+   |_ Python packages:
+   |_ Interoporability with ArcGIS, QGIS, other stand-alone tools
    
 4) GIS Academic papers - what kinds of questions are answered?
 ```
@@ -19,6 +21,7 @@ GIS = geospatial information systems
 ## Draft Pages
 
 * [Create a heatmap of the USA](heatmap_map.md)
+* [Create an interactive map marking SCINet sites](scinet_map.html)
 
 ## Example Academic papers
 

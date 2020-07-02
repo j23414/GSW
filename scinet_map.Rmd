@@ -1,0 +1,57 @@
+---
+title: "SCINet_Map"
+#author: "jenchang"
+date: "7/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "imgs/scinet_",
+  out.width = "100%"
+)
+```
+
+## Title here
+
+```{r, warning=F, message=F}
+library(tidyverse)
+library(magrittr)
+
+library(leaflet)
+library(mapview)
+```
+
+```{r}
+data <- readxl::read_excel("data/scinet.xlsx")
+head(data)
+```
+
+These are 6 of the locations for SCINet. From longitutde and latitude values we can plot this on an interactive map. 
+
+```{r}
+center_lng = mean(data$lng)
+center_lat = mean(data$lat)
+view_zoom = 2.75
+
+(mp <- leaflet() %>%
+    setView(lng = center_lng, lat = center_lat, zoom = view_zoom) %>%
+    addProviderTiles("NASAGIBS.ViirsEarthAtNight2012") %>%   # Sets background map
+    addMarkers(lng = data$lng,                               # Add markers
+               lat = data$lat, 
+               #label = data$show,
+               #labelOptions = labelOptions(noHide=T)
+               popup = data$popup
+    )
+)
+
+# This exports that interactive map into a png image
+#OUTFILE = INFILE %>% gsub(".tsv", "", .) %>% paste(., "_map.png", sep="")
+#mapshot(mp, file=OUTFILE, 
+#        vwidth=1024, vheight=600)      # Set Width and Height
+#cat(paste("DONE: Generated ", OUTFILE, " from ", INFILE, "\n", sep=""))
+
+
+```
