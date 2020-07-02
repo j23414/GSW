@@ -21,7 +21,7 @@ GIS = geospatial information systems
 ## Draft Pages
 
 * [Create a heatmap of the USA](heatmap_map.md)
-* [Create an interactive map marking SCINet sites](scinet_map.html)
+* [Create an interactive map marking SCINet sites](scinet_map.html) * will not render in github, need to download and open the html file
 
 ## Example Academic papers
 
